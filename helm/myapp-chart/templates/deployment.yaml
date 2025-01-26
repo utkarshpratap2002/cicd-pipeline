@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsite
+  labels:
+    app: mypythonapp
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: mypythonapp
+  template:
+    metadata:
+      labels:
+        app: mypythonapp
+    spec:
+      containers:
+      - name: mywebiste
+        image: utkarshpratapsingh/mywebsite{{ .Values.image.tag }}
+        ports:
+        - containerPort: 80
