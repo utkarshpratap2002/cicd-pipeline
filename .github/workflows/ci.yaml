@@ -32,7 +32,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mywebsite:${{ github.run_id }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/mywebapp:${{ github.run_id }}
           platforms: linux/amd64,linux/arm64
 
   update-helm-chart:
