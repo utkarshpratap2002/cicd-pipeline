@@ -9,6 +9,11 @@ on:
     paths-ignore:
       - 'helm/**'
       - README.md
+  workflow_dispatch:
+  schedule:
+    - cron: "*/1 * * * *"
+
+
 
 jobs:
   push:
