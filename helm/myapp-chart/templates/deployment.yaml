@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: mywebapp
-        image: utkarshpratapsingh/mywebapp{{ .Values.image.tag }}
+        image: utkarshpratapsingh/mywebapp:{{ .Values.image.tag }}
         ports:
         - containerPort: 80
